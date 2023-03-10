@@ -18,10 +18,10 @@ Installation (Python 3.10):
 
 Create `local_settings.py` with the following parameters
 
-    ATMOCUBE_IP = '[IP]'
+    ATMOCUBE_IP = '192.168.1.149' #set your real Atmocube IP here
     ATMOCUBE_IP_PORT = 502
-    LEVOIT_EMAIL = '[email]'
-    LEVOIT_PASSWORD = '[password]'
+    LEVOIT_EMAIL = '[email]' #set levoit account email
+    LEVOIT_PASSWORD = '[password]' #set levoit account password
 Run script
 
     python atmocube-modbus-tcp.py
@@ -68,8 +68,8 @@ Installation (Python 3.10):
 
 Create `local_settings.py` with the following parameters
 
-    ATMOCUBE_RTU_PORT = '/dev/cu.usbserial-AQ027VNZ'
-    ATMOCUBE_RTU_DEVICE_ID = 10
+    ATMOCUBE_RTU_PORT = '/dev/cu.usbserial-AQ027VNZ' #set your serial port name here
+    ATMOCUBE_RTU_DEVICE_ID = 10 #modify id according to Atmocube configuration tool
     ATMOCUBE_RTU_BAUDRATE = 115200
     ATMOCUBE_RTU_DATA_BITS = 8
     ATMOCUBE_RTU_PARITY = 'N'
@@ -100,11 +100,11 @@ Installation (Python 3.10):
 ```
 pip install bleak
 ```
-On MacOS installation may be tricky. You have to modify Info.plist for terminal app. [See Bleak troubleshooting](https://bleak.readthedocs.io/en/latest/troubleshooting.html).
+On MacOS installation may be tricky. You have to modify `Info.plist` for terminal app. [See Bleak troubleshooting](https://bleak.readthedocs.io/en/latest/troubleshooting.html).
 
 Create `local_settings.py` with the following parameters
 
-    ATMOCUBE_BLE_NAME = 'CUBE_004C'
+    ATMOCUBE_BLE_NAME = 'CUBE_004C' #set your Atmocube device BLE name CUBE_[last 4 MAC address characters]
 
 Run script
 
