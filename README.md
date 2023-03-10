@@ -1,7 +1,7 @@
 # Atmocube integration demo
 Demo integration Atmocube Air Quality monitor + Levoit Air Purifier
 
-This demo demonstrate how to use Atmocube local interfaces and get the air quality data to control purifier via cloud API.
+This demo demonstrates how to use Atmocube local interfaces and get the air quality data to control purifier via cloud API.
 
 The following interfaces are demonstrated:
 - Modbus TCP
