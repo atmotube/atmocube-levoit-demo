@@ -49,6 +49,29 @@ Output should be the following:
     o3 = 0.0 ppm
     ch2o = 0.0 ppm
 
+|Address (hex)|Address (decimal)|Name|Units|Format
+|--|--|--|--|--|
+|0x40|64|Total Volatile Organic Compounds (TVOCs)|ppb|uint16_t|
+|0x41|65|PM 1.0|µg/m<sup>3</sup> x 10|uint16_t|
+|0x42|66|PM 2.5|µg/m<sup>3</sup> x 10|uint16_t|
+|0x43|67|PM 4|µg/m<sup>3</sup> x 10|uint16_t|
+|0x44|68|PM 10|µg/m<sup>3</sup> x 10|uint16_t|
+|0x45|69|Carbon dioxide (CO<sub>2</sub>)|ppm|uint16_t|
+|0x46|70|Temperature|Celcius x 100|int16_t|
+|0x47|71|Humidity|% x 100|uint16_t|
+|0x48|72|Absolute humidity|g/m<sup>3</sup>|uint16_t|
+|0x49|73|Pressure|mbar x 10|uint16_t|
+|0x4A|74|Noise|dB|uint16_t|
+|0x4B|75|Light|Lux|uint16_t|
+|0x4C|76|Nitrogen dioxide (NO<sub>2</sub>)|ppb|uint16_t|
+|0x4D|77|Carbon monoxide (CO)|ppb|uint16_t|
+|0x4E|78|Ozone (O<sub>3</sub>)|ppb|uint16_t|
+|0x4F|79|Formaldehyde (CH<sub>2</sub>O)|ppb|uint16_t|
+|0x50|80|Color temperature|K|uint16_t|
+|0x51|81|People index (0 to 100)|index|uint16_t|
+|0x52|82|VOC index|index|uint16_t|
+|0x53|83|NO<sub>x</sub> index|index|uint16_t|
+
 ## Modbus RTU
 Make sure Modbus RTU is enabled via [Atmocube configuration tool](https://atmotube.com/atmocube-support/modbus-setup-guide).
 
@@ -94,6 +117,30 @@ Output should be the following:
     noise = 39 dBa
     light = 53 Lux
     ch2o = 0.0 ppm
+
+|Address (hex)|Address (decimal)|Name|Units|Format
+|--|--|--|--|--|
+|0x3F|63|Total Volatile Organic Compounds (TVOCs)|ppb|uint16_t|
+|0x40|64|PM 1.0|µg/m<sup>3</sup> x 10|uint16_t|
+|0x41|65|PM 2.5|µg/m<sup>3</sup> x 10|uint16_t|
+|0x42|66|PM 4|µg/m<sup>3</sup> x 10|uint16_t|
+|0x43|67|PM 10|µg/m<sup>3</sup> x 10|uint16_t|
+|0x44|68|Carbon dioxide (CO<sub>2</sub>)|ppm|uint16_t|
+|0x45|69|Temperature|Celcius x 100|int16_t|
+|0x46|70|Humidity|% x 100|uint16_t|
+|0x47|71|Absolute humidity|g/m<sup>3</sup>|uint16_t|
+|0x48|72|Pressure|mbar x 10|uint16_t|
+|0x49|73|Noise|dB|uint16_t|
+|0x4A|74|Light|Lux|uint16_t|
+|0x4B|75|Nitrogen dioxide (NO<sub>2</sub>)|ppb|uint16_t|
+|0x4C|76|Carbon monoxide (CO)|ppb|uint16_t|
+|0x4D|77|Ozone (O<sub>3</sub>)|ppb|uint16_t|
+|0x4E|78|Formaldehyde (CH<sub>2</sub>O)|ppb|uint16_t|
+|0x4F|79|Color temperature|K|uint16_t|
+|0x50|80|People index (0 to 100)|index|uint16_t|
+|0x51|81|VOC index|index|uint16_t|
+|0x52|82|NO<sub>x</sub> index|index|uint16_t|
+    
 ## BLE (Bluetooth advertising)
 Installation (Python 3.10):
 
