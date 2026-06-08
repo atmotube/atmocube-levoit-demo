@@ -13,8 +13,9 @@ Make sure Modbus TCP is enabled via [Atmocube configuration tool](https://atmotu
 
 Installation (Python 3.10):
 
-    pip install pyvesync
-    pip install pymodbus
+    python3 -m venv env
+    source env/bin/activate
+    pip install -r requirements.txt
 
 Create `local_settings.py` with the following parameters
 

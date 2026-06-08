@@ -11,8 +11,8 @@ client = ModbusSerialClient(port=ATMOCUBE_RTU_PORT,
                             timeout=1)
 
 while True:
-    result = client.read_input_registers(0x003F, 20, slave=ATMOCUBE_RTU_DEVICE_ID)
-    available = client.read_discrete_inputs(0x003F, 20, slave=ATMOCUBE_RTU_DEVICE_ID)
+    result = client.read_input_registers(0x003F, count=20, device_id=ATMOCUBE_RTU_DEVICE_ID)
+    available = client.read_discrete_inputs(0x003F, count=20, device_id=ATMOCUBE_RTU_DEVICE_ID)
     print("---------------------")
     if available.bits[0] == 1:
         print("TVOC = {:.2f} ppm".format(result.registers[0] / 1000))
